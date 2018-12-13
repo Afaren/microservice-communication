@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: ${name}
+
+server:
+  port: 9090
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://${EurekaServerIP}:8761/eureka/

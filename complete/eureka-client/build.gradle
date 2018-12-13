@@ -18,7 +18,7 @@ apply plugin: 'io.spring.dependency-management'
 
 bootJar {
 	baseName = 'eureka-client'
-	version = '0.0.1-SNAPSHOT'
+	version = '1'
 }
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
@@ -34,6 +34,7 @@ dependencyManagement {
 }
 
 dependencies {
+	compile('org.springframework.cloud:spring-cloud-starter-openfeign')
 	compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
 	compile('org.springframework.boot:spring-boot-starter-web')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
