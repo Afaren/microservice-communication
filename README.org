@@ -13,8 +13,8 @@ Use Docker native network.
 
 
 *** run two instance 
-- dk run --name client-1 -d -e 'name=client-1' -p 9091:9090 client:1
-- dk run --name client-2 -d -e 'name=client-2' -p 9092:9090 client:1
+- docker run --name client-1 -d -e 'name=client-1' -p 9091:9090 client:1
+- docker run --name client-2 -d -e 'name=client-2' -p 9092:9090 client:1
 
 
 *** test communication
