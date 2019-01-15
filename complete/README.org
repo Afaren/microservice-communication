@@ -1,0 +1,28 @@
+* Microservice Communication in Docker
+** Version 1
+Use Eureka to do registeration and discovery.
+
+
+** Version 2
+Use Docker native network.
+
+
+*** build docker image 
+- ./gradlew bootjar
+- docker build -t 'client:1' .
+
+
+*** run two instance 
+- dk run --name client-1 -d -e 'name=client-1' -p 9091:9090 client:1
+- dk run --name client-2 -d -e 'name=client-2' -p 9092:9090 client:1
+
+
+*** test communication
+
+**** call client-2 from client-1
+- curl localhost:9091/hello-client-2/Afar
+
+
+**** call client-1 from client-2
+- curl localhost:9092/hello-client-1/Afar
+
